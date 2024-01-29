@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RampEx Technologies</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a4a8d5c35d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="feedbackbox">
+            <div class="emoji">
+                <div id="emoji">
+                    <img src="images/poor.png" alt="">
+                    <img src="images/bad.png" alt="">
+                    <img src="images/okay.png" alt="">
+                    <img src="images/good.png" alt="">
+                    <img src="images/excellent.png" alt="">
+
+                </div>
+               
+        </div>
+        <div class="rating">
+            <!-- <i class="fa-solid fa-star" style="color: #FFD43B;"></i> -->
+         <!-- <i class="fas fa-star"></i> -->
+         <i class="fa-solid fa-star"></i>
+         <i class="fa-solid fa-star"></i>
+         <i class="fa-solid fa-star"></i>
+         <i class="fa-solid fa-star"></i>
+         <i class="fa-solid fa-star"></i>
+        </div>
+    </div>
+    <script>
+        var stars = document.getElementsByClassName("fa-solid");
+        var emoji = document.getElementById("emoji");
+        
+        stars[0].onclick = function () {
+            setStarsAndEmojiColors(0);
+        };
+        
+        stars[1].onclick = function () {
+            setStarsAndEmojiColors(1);
+        };
+        
+        stars[2].onclick = function () {
+            setStarsAndEmojiColors(2);
+        };
+        
+        stars[3].onclick = function () {
+            setStarsAndEmojiColors(3);
+        };
+        
+        stars[4].onclick = function () {
+            setStarsAndEmojiColors(4);
+        };
+        
+        function setStarsAndEmojiColors(index) {
+            for (var i = 0; i <= index; i++) {
+                stars[i].style.color = "#ffd93b";
+            }
+            for (var j = index + 1; j < stars.length; j++) {
+                stars[j].style.color = "#e4e4e4";
+            }
+            emoji.style.transform = "translateX(" + (-100 * index) + "px)";
+        }
+        
+
+    </script>
+    
+</body>
+</html>
